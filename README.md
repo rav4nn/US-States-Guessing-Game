@@ -12,7 +12,20 @@ The goal is to correctly guess all 50 U.S. states. Each correct guess is display
 - If the guess is correct:
   - The state name appears at its correct location on the map
   - The score counter increases
-- The game continues until all 50 states are guessed
+- Duplicate guesses are ignored
+- The player can type **`exit`** at any time to quit the game
+- On exit, a CSV file containing the **states not guessed** is generated
+
+---
+
+## 🧠 Exit Feature & Learning Mode
+
+If the user types `exit` during the game:
+
+- The game ends gracefully
+- A file called `states_to_learn.csv` is created
+- This file contains all U.S. states that were **not guessed**
+- This allows the player to review and practice missed states later
 
 ---
 
@@ -64,12 +77,13 @@ python main.py
 ```
 ---
 
-🧠 What I Learned From This Project
+## 🧠 What I Learned From This Project
 
-- Using Pandas to read and filter data from a CSV file
-- Extracting single values from Pandas Series using .iloc
-- Mapping real-world coordinates to a graphical interface
-- Building an interactive game loop using Turtle
+- Filtering and extracting single values from Pandas DataFrames
+- Preventing duplicate user inputs using Python lists
+- Gracefully exiting an interactive Turtle application
+- Exporting dynamically generated data to CSV using Pandas
+- Structuring a Python project for clarity and reusability
 
 ---
 
